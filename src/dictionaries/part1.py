@@ -79,3 +79,10 @@ name['last'] = 'Bob'
 person['name'] = name
 person['age'] = 19
 print('person', person)
+
+"""
+That covers the very basics of dictionaries, there are a lot of other powerful features so will be covered in part2,
+but play around with this file to make sure everything makes sense. Try updating the person dictionary to have
+an address key with a dictionary to store information on the address something like below
+person {'name': {'first': 'Jimmothy', 'last': 'Bob'}, 'age': 19, 'address': {'street': 'first', 'number': 13}}
+"""
