@@ -1,6 +1,6 @@
 """
 Python dictionaries are incredibly powerful. They can handle getting just about any kind of data. This file will
-walk you through how flexible dictionaries can be and what they "look like"
+walk you through how flexible 1.dictionaries can be and what they "look like"
 """
 
 """
