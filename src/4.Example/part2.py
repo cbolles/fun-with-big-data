@@ -78,7 +78,7 @@ def show_pie_chart(coins: list) -> None:
     :return: None
     """
     labels = [coin.name for coin in coins]
-    total_volume = sum([coin.volume_usd for coin in coins])
+    total_volume = sum(coin.volume_usd for coin in coins)
     sizes = [coin.volume_usd / total_volume for coin in coins]
 
     fig1, ax1 = plt.subplots()
