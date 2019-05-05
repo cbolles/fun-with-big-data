@@ -78,7 +78,6 @@ def show_pie_chart(coins: list) -> None:
     fig1, ax1 = plt.subplots()
     ax1.pie(sizes, labels=labels, autopct='%1.1f%%')
     ax1.axis('equal')
-    plt.show()
 
 
 def show_bar_graph(coins: list) -> None:
@@ -96,7 +95,6 @@ def show_bar_graph(coins: list) -> None:
     ax.yaxis.set_major_formatter(formatter)
     plt.bar(x, volume)
     plt.xticks(x, [coin.name for coin in coins], rotation='vertical')
-    plt.show()
 
 
 def main():
@@ -113,6 +111,8 @@ def main():
         show_pie_chart(coins)
     if args.bar:
         show_bar_graph(coins)
+    if args.pie or args.bar:
+        plt.show()
 
 
 if __name__ == '__main__':
