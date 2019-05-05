@@ -1,11 +1,17 @@
 """
-This example will be a little more complicated. This is just to highlight a little more the potential of REST APIs
+Program that uses Coin Lore's REST API to collect data on cryptocurrency. Specifically the program looks at the
+total volume in USD that the currency has. Basic statistics are displayed via stdout and optionally the data
+can be viewed on a bar or pie graph
+
+Usage:
+    $ python3 part2.py -b -p #_max_coins
+
+author: Collin Bolles
 """
 import argparse
 import requests
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FuncFormatter
-import numpy as np
 
 API_BASE_URL = 'https://api.coinlore.com/api/'
 API_ALL_COIN_EXTENSION = 'tickers/'
@@ -28,7 +34,7 @@ class Coin:
         self.volume_usd = volume_usd
 
 
-def get_coins(max_coins=25) ->list:
+def get_coins(max_coins=25) -> list:
     """
     Get the coins from the REST API up to an including the max number passes in.
     not yet have the volume in usd set
@@ -98,6 +104,12 @@ def show_bar_graph(coins: list) -> None:
 
 
 def main():
+    """
+    Handles running the program. Parses the command line arguments and displays statistics based on the max number
+    of coins passed in. The program then checks to see if the user requested any graphs to be displayed. Bar graphs
+    and pie graphs can be generated
+    :return: None
+    """
     parser = argparse.ArgumentParser(description='Get information on the volume of different cryptocurrency')
     parser.add_argument('max_num', action='store', type=int, help='Number of cryptocurrencies to analyse')
     parser.add_argument('-b', '--bar', action='store_true', help='Flag to display bar graph')
