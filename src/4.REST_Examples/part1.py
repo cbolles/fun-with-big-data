@@ -25,6 +25,8 @@ https://www.coinlore.com/cryptocurrency-data-api
       "tsupply": "17282687",
       "msupply": "21000000"
     },
+    ...
+    ],
   "info": {
     "coins_num": 1969,
     "time": 1538560355
@@ -76,4 +78,6 @@ for coin in useful_data:
 average = total / len(useful_data)
 print('\nThe average is', average)
 
-
+"""
+Try below to get the total value accross 13 results of the volumn24 value
+"""

@@ -68,4 +68,8 @@ print(json.dumps(out))
 Being able to convert to and from JSON is a powerful tool. Since we can convert from any file or text, if we can get
 access to JSON as a string then we can directly convert to a dictionary. This opens the ways that you can use python
 to interact with data. 
+
+Create a new .json file called bank that has the attributes number of accounts, total money, and the name of the
+manager. Load the .json file into a dictionary using json.load and print out the average amount of money in each
+account
 """
