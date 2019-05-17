@@ -56,5 +56,9 @@ print('Key "name" in dict_1:', 'name' in dict_1)
 
 """
 The above features only start to scratch the surface of what dictionaries can do. Their flexibility opens up a wide
-range of possibilities with python. The project will rely on using dictionaries and being able to loop through them
+range of possibilities with python. The project will rely on using dictionaries and being able to loop through them.
+
+Create a new .json file called bank that has the attributes number of accounts, total money, and the name of the
+manager. Load the .json file into a dictionary using json.load and print out the average amount of money in each
+account
 """
