@@ -19,7 +19,7 @@ def goodbye():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=8080)
 
 """
 In your console you should be able to see a URL that was spit out. Go to that URL and you should be able
